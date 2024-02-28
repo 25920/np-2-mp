@@ -62,11 +62,5 @@ for h in 1:ij*ij
   end
 end
 
-mgs = reshape(gs,ij,ij)
-
-for i in 1:size(mgs, 1)
-    for j in 1:size(mgs, 1)
-        print(mgs[i, j], "\t")
-    end
-    println()
-end
+for j in 1:length(gs)
+  println(j)
