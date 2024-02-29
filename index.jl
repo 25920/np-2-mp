@@ -1,8 +1,8 @@
 m_complex = [
-    1 2im -1im 4-1im;
-    -2im 8 6im 8+1im;
-    1im -6im 12 1im;
-    4+1im 8-1im -1im 20
+    1+0im 0+2im 0-1im 4-1im;
+    0-2im 8+0im 0+6im 8+1im;
+    0+1im 0-6im 12+0im 0+1im;
+    4+1im 8-1im 0-1im 20+0im
 ] # complex matrix
 
 m_conjugate = conj(m_complex) # conjugated form
@@ -14,6 +14,8 @@ m_c_m_ct = false
 if m_transpose==m_complex
     m_c_m_ct=true
 end
+
+println(m_transpose)
 
 # println("complex matrix M\n$m_complex")
 
@@ -65,8 +67,8 @@ end
 mgs = reshape(gs,ij,ij)
 
 for i in 1:size(mgs, 1)
-    for j in 1:size(mgs, 1)
-        print(mgs[i, j], "\t")
-    end
-    println()
+  for j in 1:size(mgs, 1)
+    print(mgs[i, j], "\t")
+  end
+  println()
 end
